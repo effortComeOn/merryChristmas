@@ -140,7 +140,6 @@
       text-align: center;
       opacity: 0;
       transition: all 1.5s ease-in-out;
-      /* animation: tracking-in-contract-bck-bottom 2.5s cubic-bezier(0.215, 0.610, 0.355, 1.000) both infinite; */
       z-index: -1;
       bottom: 15%;
     }
@@ -160,6 +159,7 @@
       z-index: 100;
       font-size: 20px;
       transition: none;
+      animation: tracking-in-contract-bck-bottom 2.5s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
     }
 
     @keyframes tracking-in-contract-bck-bottom {
@@ -270,6 +270,7 @@
   <script src="https://cdn.jsdelivr.net/npm/three@0.115.0/examples/js/shaders/CopyShader.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/three@0.115.0/examples/js/shaders/LuminosityHighPassShader.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/three@0.115.0/examples/js/postprocessing/UnrealBloomPass.js"></script>
+
   <script id="rendered-js">
     const { PI, sin, cos } = Math;
     const TAU = 2 * PI;
@@ -319,9 +320,14 @@
 
     function initText() {
       const my_labels = [
-        "亲爱的，我们在一起很久了",
-        "想和你一直一直走下去",
-        "未来我们都要好好的"
+        'We wish you a Merry Christmas',
+        '我们祝你圣诞快乐呀',
+        'We wish you a Merry Christmas',
+        '我们祝你圣诞快乐呀',
+        'We wish you a Merry Christmas',
+        '我们祝你圣诞快乐呀',
+        'and a Happy New Year',
+        '新年快乐哟',
       ];
 
       const labels = document.getElementById("labels");
@@ -414,7 +420,7 @@
         '<div class="text-loading">Watting...</div>';
       // "http://music.163.com/song/media/outer/url?id=3551314.mp3", // ! 音乐资源获取 网易云
       // 修改下面这个链接    
-      
+
       const files = [
         "http://m10.music.126.net/20221211164905/3f915ec7ac68c12c2733e1c64ff4da45/ymusic/obj/w5zDlMODwrDDiGjCn8Ky/3049451515/b9d6/13ab/d9b8/482182b14d5662dc55d82385885ca5cd.mp3",
       ];
